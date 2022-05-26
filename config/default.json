@@ -28,5 +28,5 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://localhost:27017/fyp_management_backend"
+  "mongodb": "mongodb+srv://usamadon:wsmever302@cluster0.dmocwjb.mongodb.net/test"
 }

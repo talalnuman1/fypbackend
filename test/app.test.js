@@ -3,7 +3,7 @@ const axios = require("axios");
 const url = require("url");
 const app = require("../src/app");
 
-const port = Process.env.PORT || 3000;
+const port = app.get("port") || 8998;
 const getUrl = (pathname) =>
   url.format({
     hostname: app.get("host") || "localhost",
