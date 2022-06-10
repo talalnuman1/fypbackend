@@ -8,8 +8,8 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const schema = new Schema(
     {
-      sendto: { type: String, required: true }, //id of user jisko behji ha request
-      sentby: { type: String, required: true }, //id of user jisne bheji ha
+      sendto: { type: String, required: true, unique: true }, //id of user jisko behji ha request
+      sentby: { type: String, required: true , unique: true}, //id of user jisne bheji ha
     },
     {
       timestamps: true,
