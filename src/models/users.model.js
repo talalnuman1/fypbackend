@@ -15,6 +15,7 @@ module.exports = function (app) {
       degree: { type: String },
       section: { type: String },
       subjects: { type: Array }, // teacher subjects
+      groupid: { type: String },
       role: { type: Number },
       // role 0 = admin  role 1= supervisor role 2 = student
     },
