@@ -9,8 +9,7 @@ module.exports = function (app) {
   const schema = new Schema(
     {
       groupid: { type: String },
-      student1: { type: Array, required: true },
-      student2: { type: Array, required: true }, //  [ {studentid:1122},{student2id:1122}]
+      groupstudents: { type: Array, required: true }, //  [ {studentid:1122},{student2id:1122}]
       groupsupervisor: { type: String }, // id of supervisor
     },
     {
