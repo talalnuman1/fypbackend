@@ -16,6 +16,7 @@ module.exports = function (app) {
       section: { type: String },
       subjects: { type: Array }, // teacher subjects
       groupid: { type: String },
+      scheduleid: { type: String, default: "62fa4d33713ce99a35d2d598" },
       role: { type: Number },
       // role 0 = admin  role 1= supervisor role 2 = student
     },
