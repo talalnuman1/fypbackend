@@ -8,11 +8,11 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const schema = new Schema(
     {
-      supervisor: { type: Array, required: true }, // ['start date string',''end date string"]
-      proposal: { type: Array, required: true }, // ['start date string',''end date string"]
-      srs: { type: Array, required: true }, // ['start date string',''end date string"]
-      middefence: { type: Array, required: true }, // ['start date string',''end date string"]
-      finaldefence: { type: Array, required: true }, // ['start date string',''end date string"]
+      supervisor: { type: Object, required: true }, // ['start date string',''end date string"]
+      proposal: { type: Object, required: true }, // ['start date string',''end date string"]
+      srs: { type: Object, required: true }, // ['start date string',''end date string"]
+      middefence: { type: Object, required: true }, // ['start date string',''end date string"]
+      finaldefence: { type: Object, required: true }, // ['start date string',''end date string"]
     },
     {
       timestamps: true,
