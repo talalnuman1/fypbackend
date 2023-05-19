@@ -8,7 +8,19 @@ module.exports = function (app) {
   const schema = new mongooseClient.Schema(
     {
       email: { type: String, unique: true, lowercase: true },
-      password: { type: String },
+      password: {
+        type: String,
+        validate: {
+          validator: function (password) {
+            // Password should be at least 8 characters long
+            // and contain at least one uppercase letter and one special character
+            const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+            return passwordRegex.test(password);
+          },
+          message:
+            "Password should be at least 8 characters long and contain at least one uppercase letter and one special character.",
+        },
+      },
       fullName: { type: String },
       rollNumber: { type: String },
       department: { type: String },
