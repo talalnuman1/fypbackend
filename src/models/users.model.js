@@ -11,15 +11,14 @@ module.exports = function (app) {
         type: String,
         validate: {
           validator: function (password) {
-            // Password should be at least 8 characters long
-            // and contain at least one uppercase letter and one special character
-            const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+            const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9!@#$%^&*]).{8,}$/;
             return passwordRegex.test(password);
           },
-          message:
-            "Password should be at least 8 characters long and contain at least one uppercase letter and one special character.",
+          message: "Password should be at least 8 characters long and contain at least one uppercase letter and one number or special character.",
         },
       },
+      
+
       fullName: { type: String },
       rollNumber: { type: String },
       department: { type: String },
